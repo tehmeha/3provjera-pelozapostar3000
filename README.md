@@ -1,2 +1,1 @@
-# 10dz
-Tehmeha 10. Domaća zadaća
+# 3. Provjera znanja na računalu
