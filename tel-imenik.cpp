@@ -23,12 +23,12 @@ int main()
         {
             cout << "Unesite ime i prezime: ";
             cin.ignore();
-            getline(cin, prezimeIme[brojKlijenata]);
-            brojKlijenata++;
+            getline(cin, prezimeIme[brojOsoba]);
+            brojOsoba++;
         }
         else if( izbor == 2 )
         {
-            for( int i = 0; i < brojKlijenata; i++ )
+            for( int i = 0; i < brojOsoba; i++ )
             {
                 cout << prezimeIme[i] << endl;
             }
