@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 using namespace std;
 
 int main()
@@ -7,6 +8,8 @@ int main()
     int izbor;
     int MAX = 50;
     string artikli[MAX];
+    ofstream datotekaUpisivanje;
+    ifstream datotekaUcitavanje;
 
     while(1)
     {
@@ -15,8 +18,9 @@ int main()
         cout << "2. Ispisi sve podatke" << endl;
         cout << "3. Pretraga prema bar kodu artikla" << endl;
         cout << "4. Pretraga prema nazivu artikla" << endl;
-        cout << "5. Ispisi sortirano prema nazivu artikla" << endl;
-        cout << "6. Izlaz iz programa" << endl;
+        cout << "5. Izmjena podataka prema bar kodu" << endl;
+        cout << "6. Ispisi sortirano prema nazivu artikla" << endl;
+        cout << "7. Izlaz iz programa" << endl;
         cout << "Upisite broj iz izbornika: ";
         cin >> izbor;
         if( izbor == 1 )
@@ -28,6 +32,7 @@ int main()
         }
         else if( izbor == 2 )
         {
+            cout << "bar kod" << "\t" << "naziv artikla" << "\t" << "cijena" << endl;
             for( int i = 0; i < brojArtikla; i++ )
             {
                 cout << artikli[i] << endl;
@@ -43,6 +48,9 @@ int main()
         {
         }
         else if( izbor == 6 )
+        {
+        }
+        else if( izbor == 7 )
         {
             cout << "Kraj rada" << endl;
             break;
