@@ -104,10 +104,22 @@ int main()
 
         else if( izbor == 5 )
         {
-        }
+            unsigned long long int barkod_pretraga;
+            cout << "Upisite barkod po kojem zelite naci artikl: ";
+            cin >> barkod_pretraga;
+            bool pronadjen = false;
+            for (int i = 0; i < brojArtikla; i ++ )
+            {
+                if(barkod_pretraga==barkod[i])
+                    cout <<"Unesite novu cijenu: " << endl;
+                cin >> cijena[i];
+                break;
+            }
         else if( izbor == 6 )
         {
+
         }
+
         else if( izbor == 7 )
         {
             cout << "Kraj rada" << endl;
