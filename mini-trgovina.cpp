@@ -68,29 +68,40 @@ int main()
 
         else if( izbor == 4 )
         {
-            string artikli_pretraga;
-            cout << " artikl po kojem zelite odrediti podatke:";
-            cin.ignore ();
-            getline (cin, artikli_pretraga );
-            bool pronadjen = false;
-            for (int i = 0; i < brojArtikla; i++)
+            string  artikl_pretraga;
+            cout << "upisite artikl po kojem zelite saznati podatke: ";
+            cin.ignore();
+            getline(cin, artikl_pretraga);
+            bool pronadjen=false;
+            for (int i=0 ; i<brojArtikla; i++)
             {
-                if(barkod_pretraga ==barkod [i] )
+                if(artikl_pretraga == artikli[i])
                 {
-
-
-                cout << artikli[i]<< "\t";
-                cout << barkod [i] << "\t";
-                cout << cijena [i] << "\t";
-                pronadjen= true;
-                break;
+                    pronadjen=true;
+                    cout << barkod[i]<<"\t"<< artikli[i]<<"\t" << cijena[i]<< endl;
+                    break;
                 }
             }
-                    if (pronadjen == false)
-                    {
-                        cout << "unjeli ste krivi barkod";
-                    }
+            if(pronadjen==false)
+            {
+                cout<<"artikl nije pronaðen"<<endl;
+            }
+            }
+        else if( izbor == 5 )
+        {
+           unsigned long long int barkod_pretraga;
+            cout<<"Upisite bar kod po kojem zelite naci artikl ";
+            cin>> barkod_pretraga;
+            bool pronadjen=false;
+            for(int i=0; i<brojArtikla;i++)
+            {
+                if(barkod_pretraga==barkod[i])
+                    cout<<"Unesite novu cijenu: "<<endl;
+                cin>> cijena [i];
+                break;
+            }
         }
+
         else if( izbor == 5 )
         {
         }
